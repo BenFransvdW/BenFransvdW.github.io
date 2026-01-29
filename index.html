@@ -14,7 +14,7 @@
 		<nav class="navbar">
 			<h1 class="logo">Ben van der Westhuizen</h1>
 
-			<button class="menu-toggle" id="menu-toggle">☰</button>
+			<button class="menu-toggle" id="menu-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">☰</button>
 
 			<ul class="nav-links" id="nav-links">
 				<li><a href="#" data-page="home">Home</a></li>
@@ -27,16 +27,16 @@
 
 	<main class="pages-container">
 		<!-- Home Page -->
-		<section id="home" class="page active">
-			<div class="page-content">
+		<section id="home" class="page active" tabindex="-1">
+			<div class="page-content hero">
 				<h2>I am Ben van der Westhuizen</h2>
-				<p>Final Year Computer Science Student at Stellenbosch University | Aspiring Software Developer</p>
+				<p>Third-year Computer Science Student at Stellenbosch University | Aspiring Software Developer</p>
 				<button id="contact-btn" class="btn-primary">Contact Me</button>
 			</div>
 		</section>
 
 		<!-- About Page -->
-		<section id="about" class="page">
+		<section id="about" class="page" tabindex="-1">
 			<div class="page-content">
 				<h2>About Me</h2>
 				<p>Motivated third-year Computer Science student at the University of Stellenbosch with hands-on experience in software development,
@@ -65,7 +65,7 @@
 		</section>
 
 		<!-- Projects Page -->
-		<section id="projects" class="page">
+		<section id="projects" class="page" tabindex="-1">
 			<div class="page-content">
 				<h2>Projects</h2>
 
@@ -84,7 +84,7 @@
 		</section>
 
 		<!-- Contact Page -->
-		<section id="contact" class="page">
+		<section id="contact" class="page" tabindex="-1">
 			<div class="page-content">
 				<h2>Contact</h2>
 				<p>Get in touch with me through any of the following:</p>
