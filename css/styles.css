@@ -95,6 +95,13 @@ header {
 	display: block;
 }
 
+/* When a page has enough vertical space, center its content */
+.page.centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .page-content {
 	max-width: 900px;
 	width: 100%;

@@ -19,12 +19,40 @@ function showPage(pageId) {
 	}
 }
 
+// Dynamically center page content if there's enough vertical space
+const header = document.querySelector('header');
+function updateDynamicCentering() {
+	pages.forEach(page => {
+		const content = page.querySelector('.page-content');
+		if (!content) return;
+		const headerHeight = header ? header.offsetHeight : 0;
+		const available = window.innerHeight - headerHeight - 40; // buffer
+		if (content.scrollHeight < available) {
+			page.classList.add('centered');
+		} else {
+			page.classList.remove('centered');
+		}
+	});
+}
+
+// Update centering when the window resizes and after navigation
+window.addEventListener('resize', updateDynamicCentering);
+
+const originalShowPage = showPage;
+function showPageAndUpdate(pageId) {
+	originalShowPage(pageId);
+	// Delay to allow layout to settle
+	setTimeout(updateDynamicCentering, 50);
+}
+
+// Replace usage of showPage with showPageAndUpdate where appropriate
+
 // Navigation link click handling
 navLinks.forEach(link => {
 	link.addEventListener('click', (e) => {
 		e.preventDefault();
 		const pageId = link.getAttribute('data-page');
-		showPage(pageId);
+		showPageAndUpdate(pageId);
 
 		// Close mobile menu when a link is clicked
 		if (navLinksMenu) navLinksMenu.classList.remove('active');
@@ -49,11 +77,13 @@ if (menuToggle && navLinksMenu) {
 // Contact button - navigate to contact page
 if (contactBtn) {
 	contactBtn.addEventListener('click', () => {
-		showPage('contact');
+		showPageAndUpdate('contact');
 		if (navLinksMenu) navLinksMenu.classList.remove('active');
 		if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
 	});
 }
 
 // Initialize - show home page
-showPage('home');
+showPageAndUpdate('home');
+// Initial centering pass
+updateDynamicCentering();
