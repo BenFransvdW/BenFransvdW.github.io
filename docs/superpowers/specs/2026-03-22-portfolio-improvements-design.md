@@ -115,7 +115,7 @@ Full-viewport section, vertically centered. Two-column layout:
 - Three contact items as large clickable links:
   - Email — `benvdwest7@gmail.com`
   - GitHub — `github.com/BenFransvdW`
-  - LinkedIn — user provides URL (placeholder: `https://linkedin.com/in/PLACEHOLDER`)
+  - LinkedIn — `https://www.linkedin.com/in/ben-van-f-der-westhuizen/`
 - Resume download button (outlined cyan, same style as hero) for recruiters who scroll to the bottom
 - No contact form
 
@@ -153,7 +153,7 @@ The following must be added by the user before the site is complete:
 |---|---|---|
 | Profile photo | `assets/images/profile.jpg` | Headshot, ideally square |
 | Resume/CV | `assets/resume.pdf` | PDF format |
-| LinkedIn URL | In `index.html` | Replace placeholder |
+| LinkedIn URL | In `index.html` | ✅ `https://www.linkedin.com/in/ben-van-f-der-westhuizen/` |
 | GitHub repo URLs | In `index.html` | One per project card |
 
 ---
