@@ -69,6 +69,7 @@ Full-viewport section, vertically centered. Two-column layout:
 **Right column (~40% width):**
 - Circular `<img src="assets/images/profile.jpg">` with cyan ring border
 - Falls below text on mobile (flex-direction: column)
+- **Fallback:** if `profile.jpg` is absent, the right column is hidden (`display: none`) so the left column expands to full width without a broken layout
 
 ### 4.3 About (`#about`)
 
@@ -97,12 +98,15 @@ Full-viewport section, vertically centered. Two-column layout:
   - GitHub link (opens in new tab) — omitted if repo is private/unavailable
   - Hover lift animation (keep existing style)
 - Cards ordered by recruiter impact:
-  1. WISTL Compiler ⭐ Featured
-  2. Homelab ⭐ Featured
-  3. Statera
-  4. Quasi-Palindromic DNA Analysis Utility
-  5. Python Board Game
-  6. Personal Website
+
+| # | Title | Featured | Description | Tech Stack | Repo URL |
+|---|---|---|---|---|---|
+| 1 | WISTL Compiler | ✅ | A full compilation pipeline for the WISTL teaching language — lexer, parser, semantic analyser, and JVM bytecode generator. | C, JVM Bytecode, Compiler Design | _user provides_ |
+| 2 | Homelab | ✅ | Self-hosted infrastructure on a Raspberry Pi 5 — Pi-hole for DNS ad-blocking, Audiobookshelf, Plex, and Tailscale VPN for secure remote access. | Raspberry Pi, Docker, Linux, Tailscale | _no public repo_ |
+| 3 | Statera | | Java desktop application for work-life balance featuring Focus Mode and a workaholic filter to enforce healthy work patterns. | Java, OOP, Desktop UI | _user provides_ |
+| 4 | Quasi-Palindromic DNA Analysis Utility | | Analyses DNA sequences to detect quasi-palindromic patterns, supporting bioinformatics research workflows. | Java, Algorithm Design | _user provides_ |
+| 5 | Python Board Game | | Two-player command-line board game with full turn management, input validation, and win detection. | Python | _user provides_ |
+| 6 | Personal Website | | This portfolio — a responsive single-page site built with vanilla HTML, CSS, and JavaScript. | HTML, CSS, JavaScript | _user provides_ |
 
 ### 4.6 Contact (`#contact`)
 
@@ -111,7 +115,7 @@ Full-viewport section, vertically centered. Two-column layout:
 - Three contact items as large clickable links:
   - Email — `benvdwest7@gmail.com`
   - GitHub — `github.com/BenFransvdW`
-  - LinkedIn — user provides URL
+  - LinkedIn — user provides URL (placeholder: `https://linkedin.com/in/PLACEHOLDER`)
 - Resume download button (outlined cyan, same style as hero) for recruiters who scroll to the bottom
 - No contact form
 
