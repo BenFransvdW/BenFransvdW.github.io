@@ -79,16 +79,16 @@ header {
   color: var(--accent);
 }
 
-.nav-resume {
+.nav-links .nav-resume {
   padding: 0.45rem 1.1rem;
   border: 1px solid var(--accent);
   border-radius: 4px;
-  color: var(--accent) !important;
+  color: var(--accent);
   font-size: 0.85rem;
-  transition: background-color 0.2s ease, color 0.2s ease !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.nav-resume:hover {
+.nav-links .nav-resume:hover {
   background-color: rgba(100, 255, 218, 0.1);
 }
 
@@ -182,8 +182,8 @@ section {
     border-bottom: none;
   }
 
-  .nav-resume {
-    border: none !important;
-    padding: 0 !important;
+  .nav-links .nav-resume {
+    border: none;
+    padding: 0;
   }
 }
