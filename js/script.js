@@ -20,7 +20,7 @@ if (menuToggle && navLinks) {
 }
 
 // ===== Scroll-spy: highlight active nav link =====
-const sections = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll('section[id]:not(#hero)');
 const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 
 const observer = new IntersectionObserver(entries => {

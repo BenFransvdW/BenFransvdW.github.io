@@ -36,6 +36,11 @@ a {
   color: inherit;
 }
 
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 /* ===== Navbar ===== */
 header {
   position: sticky;
@@ -582,4 +587,10 @@ section {
 .contact-link:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+/* ===== Utility ===== */
+.btn-standalone {
+  margin-top: 2.5rem;
+  display: inline-block;
 }
