@@ -524,3 +524,59 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Contact ===== */
+#contact {
+  background-color: var(--bg-light);
+}
+
+.contact-inner {
+  text-align: center;
+}
+
+.contact-inner .section-title {
+  justify-content: center;
+}
+
+.contact-inner .section-title::after {
+  display: none;
+}
+
+.contact-intro {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 520px;
+  margin: 0 auto 2.5rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--bg);
+  background-color: var(--bg);
+  transition: border-color 0.2s ease, color 0.2s ease;
+  width: 100%;
+  max-width: 360px;
+}
+
+.contact-link svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.contact-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
